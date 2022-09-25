@@ -1,0 +1,12 @@
+.noCard {
+  margin: 20px auto;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .noCard {
+    margin-top: 30px;
+    margin-left: 0;
+    width: 90%;
+  }
+}

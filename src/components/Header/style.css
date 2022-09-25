@@ -1,0 +1,98 @@
+header {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  background-color: var(--Grey-4);
+}
+
+header nav {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 85px;
+  /* border: 1px solid red;; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav button {
+  padding: 5px 13px;
+  background-color: var(--Grey-2);
+  color: var(--Grey-4);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+
+.hamburg {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 40px;
+  height: 30px;
+  display: none;
+}
+
+.hamburg .line1 {
+  display: block;
+  width: 40px;
+  height: 8px;
+  background-color: var(--Color-primary);
+  border-radius: 5px;
+  animation: line1 2s ease-in forwards;
+}
+
+.hamburg .line2 {
+  display: block;
+  width: 40px;
+  height: 8px;
+  background-color: var(--Color-primary);
+  border-radius: 5px;
+  animation: line2 2s ease-in forwards;
+}
+
+.hamburg .line3 {
+  display: block;
+  width: 40px;
+  height: 8px;
+  background-color: var(--Color-primary);
+  border-radius: 5px;
+  animation: line3 2s ease-in forwards;
+}
+
+@keyframes line2 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes line1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(12px) rotate(45deg);
+  }
+}
+
+@keyframes line3 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+}

@@ -1,0 +1,14 @@
+@import url(../../variables.css);
+.Nu {
+  color: var(--Color-primary);
+  font-size: 25px;
+  margin-right: 10px;
+  /* margin-bottom: 20px; */
+  font-weight: 600;
+}
+.Kenzie {
+  color: var(--Color-kenzie);
+  /* margin-bottom: 20px; */
+  font-weight: 600;
+  font-size: 25px;
+}

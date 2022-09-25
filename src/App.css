@@ -1,0 +1,29 @@
+@import url(./variables.css);
+.App {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-color: var(--Grey-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font);
+}
+.btn {
+  position: relative;
+  bottom: 0;
+  width: 120px;
+  height: 50px;
+  background-color: var(--Color-primary-2);
+  color: var(--Color-kenzie);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.btn:active {
+  transform: scale(0.95);
+}

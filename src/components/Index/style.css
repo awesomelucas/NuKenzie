@@ -1,0 +1,48 @@
+@import url(../../variables.css);
+.container-home {
+  align-items: center;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.home-info {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.home-info h1 {
+  font-size: 30px;
+}
+
+.home-info span {
+  font-size: 14px;
+}
+
+.App-logo {
+  width: 80%;
+  max-width: 400px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 500px) {
+  .App-logo {
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .container-home {
+    grid-template-columns: 1fr 1fr;
+  }
+}

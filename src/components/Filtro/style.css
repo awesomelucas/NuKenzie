@@ -1,0 +1,24 @@
+@import url(../../variables.css);
+.button-area {
+  margin: 12px auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+}
+h3 {
+  font-size: var(--Title3);
+}
+.btn-filtro {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--Grey-2);
+  color: var(--Grey-4);
+  cursor: pointer;
+}
+
+.btn-filtro:active {
+  background-color: var(--Color-primary-2);
+  color: var(--Color-kenzie);
+  transform: scale(0.95);
+}

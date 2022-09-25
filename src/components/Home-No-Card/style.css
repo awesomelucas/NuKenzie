@@ -1,0 +1,91 @@
+.homeNoCard {
+  width: 100%;
+  height: 100%;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 24px;
+}
+form {
+  order: -1;
+}
+.total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 20px;
+  width: 90%;
+  height: 60px;
+  margin: 70px auto;
+  padding: 20px;
+}
+.total p {
+  text-align: left;
+  grid-column: 1/3;
+}
+
+.total > span {
+  text-align: left;
+  font-size: var(--Title3);
+  font-weight: 600;
+}
+
+.total .totalMoney {
+  text-align: right;
+  grid-column: 2;
+  color: var(--Color-primary);
+}
+
+@media (min-width: 768px) {
+  .homeNoCard {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 250px 1fr;
+    margin-top: 12rem;
+  }
+  h2 {
+    text-align: left;
+  }
+  .homeNoCard form {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+
+  .homeNoCard img {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .homeNoCard .card {
+    align-items: flex-start;
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .homeNoCard .total {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 20px;
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .homeNoCard > div {
+    display: flex;
+    align-items: center;
+    margin-top: 0rem;
+    grid-column: 2;
+    grid-row: 1;
+    /* border: 2px solid red; */
+  }
+
+  .homeNoCard > div .button-area {
+    width: 60%;
+  }
+
+  .homeNoCard .total {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
