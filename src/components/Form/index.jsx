@@ -3,20 +3,26 @@ import { useState } from "react";
 
 const Form = ({ listTransactions, setListTransactions }) => {
   const [description, setDescription] = useState("");
-  const [type, setType] = useState("");
-  const [value, setValue] = useState(1);
+  const [type, setType] = useState("Tipo de Valor");
+  const [value, setValue] = useState("");
 
   const sub = (event) => {
     event.preventDefault();
     if (description && type && value) {
-    
-      setListTransactions((maluco) => [
+ 
+      setListTransactions((maluco) => {
+        
+        let valor = Number(value)
+        if(type === "saida"){
+          valor = -valor
+        }
+        return [
         ...maluco,
-        { description, type, value },
-      ]);
+        { id:listTransactions.length+1, description, type, valor },
+      ]});
       setDescription("");
-      setType("");
-      setValue(0);
+      setType("Tipo de Valor");
+      setValue("");
     }
   };
 
@@ -30,6 +36,7 @@ const Form = ({ listTransactions, setListTransactions }) => {
         className="inputDesc"
         type="text"
         name="description"
+        value={description}
         placeholder="Digite aqui sua descrição"
         required
       />
@@ -41,21 +48,22 @@ const Form = ({ listTransactions, setListTransactions }) => {
       <input
         onChange={(event) => setValue(event.target.value)}
         className="inputValue"
-        type="number"
+        type="text"
         name="valor"
+        value={value}
         placeholder="Valor"
         required
       />
-      <span className="ex">Ex: -100 para saídas e 100 para entradas</span>
       <label className="labelType-value" htmlFor="type">
         Tipo de valor
       </label>
       <select
+      value={type}
         onChange={(event) => setType(event.target.value)}
         name="type"
         id="type"
       >
-        <option value="entrada">Tipo de valor</option>
+        <option value={type}>{type}</option>
         <option value="entrada">Entrada</option>
         <option value="saida">Saída</option>
       </select>

@@ -7,7 +7,6 @@ import "./style.css";
 
 const HomeNoCard = ({listTransactions, setListTransactions, deleteCard, filterEntrada, logout}) => {
 
-
   return (
     <>
       <Header logout={logout} />

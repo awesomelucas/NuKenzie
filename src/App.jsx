@@ -8,14 +8,21 @@ function App() {
 
   const [listTransactions, setListTransactions] = useState([]);
 
+  // const [entrada, setEntrada] = useState([])
+
   const [index, setIndex] = useState(false);
 
 
   const deleteCard = (del)=>{
     setListTransactions(
-        listTransactions.filter((element, index)=>{
-            return index !== del
+        listTransactions.filter((element)=>{
+            return element.id !== del
         })
+    )
+    setInicial(
+      listTransactions.filter((element)=>{
+        return element.id !== del
+    })
     )
 }
 
@@ -23,7 +30,8 @@ const filterEntrada = (tipo)=>{
   if(tipo === "todos"){
     setInicial([])
   }
-  setInicial( listTransactions.filter(( {type} )=>type ===tipo))
+    setInicial( listTransactions.filter(( {type} )=>type ===tipo))
+  
 }
 
   const handlerIndex = () => {
